@@ -1,0 +1,37 @@
+@use '../../utils/mixins' as *;
+
+.top-bar {
+  padding-block: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--icons {
+    display: flex;
+    gap: 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-block: 36px;
+  }
+  &__logo-link {
+    display: flex;
+    cursor: pointer;
+  }
+}
+
+.image {
+  width: 130px;
+  height: 38px;
+  background-image: url(../icons/logo.svg);
+  background-size: cover;
+
+  @include on-tablet {
+    width: 187px;
+    height: 56px;
+  }
+}
+
+.image-black {
+  background-image: url(../icons/logo-dark.svg);
+}
