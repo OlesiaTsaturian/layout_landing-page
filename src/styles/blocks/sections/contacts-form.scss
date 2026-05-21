@@ -9,10 +9,17 @@
     justify-content: center;
 
     @include on-tablet {
+      width: 100%;
+      max-width: 600px;
+      margin-inline: auto;
+
       @include page-grid;
 
-      grid-template-columns: 288px;
-      gap: 24px 0;
+      gap: 0 24px;
+    }
+
+    @include on-desktop {
+      max-width: 1020px;
     }
   }
 
