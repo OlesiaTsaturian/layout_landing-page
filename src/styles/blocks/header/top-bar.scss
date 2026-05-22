@@ -22,22 +22,27 @@
   }
 
   &__phone-number {
-    position: absolute;
-    right: calc(100% + 12px);
-    top: 50%;
-    white-space: nowrap;
-    opacity: 0;
-    transform: translateY(-50%) translateX(8px);
+    display: none;
 
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 133%;
-    letter-spacing: 0.17em;
-    color: $main-white;
+    @include on-tablet {
+      display: block;
+      position: absolute;
+      right: calc(100% + 12px);
+      top: 50%;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateY(-50%) translateX(20px);
 
-    transition:
-      opacity 0.3s,
-      transform 0.3s;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 133%;
+      letter-spacing: 0.17em;
+      color: $main-white;
+
+      transition:
+        opacity 0.3s,
+        transform 0.3s;
+    }
   }
 
   @include on-tablet {
